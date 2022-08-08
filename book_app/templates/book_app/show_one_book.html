@@ -1,0 +1,10 @@
+{% extends 'book_app/base.html' %}
+
+{% block title %} Книга {{book.title}} {% endblock %}
+
+{% block content %}
+<h1>Книга {{book.title}}</h1>
+<p>Автор книги - {{book.author}}
+    <p> Рейтинг книги - {{book.rating}}
+
+{% endblock %}

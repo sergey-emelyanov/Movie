@@ -1,0 +1,14 @@
+{% extends 'movie_app/base.html' %}
+{% block title %}
+Все фильмы
+{% endblock %}
+
+
+{% block content %}
+<h1>Все фильмы</h1>
+<ul>
+    {% for movie in movies %}
+    <li> <a href="{{ movie.get_url }}">{{movie.name}}</a>a рейтинг фильма- {{movie.rating}}, год выпуска {{movie.year|default:"Неизвестен"}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
